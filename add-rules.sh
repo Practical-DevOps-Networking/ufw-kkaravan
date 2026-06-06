@@ -6,7 +6,8 @@ if [ -z "$1" ]; then
 fi
 
 OUTPUT_FILE=$1
-
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
 sudo ufw allow from 127.0.0.1 to any port 3306 proto tcp
 
 sudo ufw allow from 192.168.32.55 to any port 3005 proto tcp
