@@ -24,9 +24,7 @@ echo "[5] Admin server panel (8099) only via eth0"
 sudo ufw allow in on eth0 to any port 8099 proto tcp
 
 echo "[6] Limit connections to ports 6050-6055"
-for port in {6050:6055}; do
-  sudo ufw limit $port/tcp
-done
+sudo ufw limit 6050:6055/tcp
 
 echo "[7] Enable UFW"
 sudo ufw --force enable
