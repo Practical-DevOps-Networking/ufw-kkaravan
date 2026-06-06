@@ -22,7 +22,7 @@ sudo ufw allow from 192.168.32.55 to any port 3005 proto tcp
 sudo ufw deny to any port 3005 proto tcp
 
 echo "[5] Admin server panel (8099) only via eth0"
-sudo ufw allow in on eth0 port 8099
+sudo ufw allow in on eth0 to any port 8099
 
 echo "[6] Limit connections to ports 6050-6055"
 sudo ufw limit 6050:6055/tcp
